@@ -1,0 +1,40 @@
+// regular font version
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"), local("Gilroy-Regular"),
+        url(../assets/font/Fonts/gilroy-regular.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+// medium font version
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"), local("Gilroy-Medium"),
+        url(../assets/font/Fonts/gilroy-medium.otf) format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+// semibold font version
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"), local("Gilroy-Semibold"),
+        url(../assets/font/Fonts/gilroy-semibold.otf) format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+// bold font version
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"), local("Gilroy-Bold"),
+        url(../assets/font/Fonts/gilroy-bold.otf) format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+$base-blue: #0073ec;
+$dark-blue: #09294c;
+$semi-white: #e0e4e8;
+$desktop-width: 1920px;
+$tablet-width: 1024px;
+$mobile-width-max: 768px;
+$mobile-width-min: 375px;

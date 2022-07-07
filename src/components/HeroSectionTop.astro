@@ -1,0 +1,135 @@
+---
+
+---
+
+<div class="hero">
+    <div class="hero__section hero__section--left">
+        <div class="hero__content hero__content--left">
+            <div class="hero__content-top">
+                <img class="hero__content-decoration" src="/assets/images/image_1.svg" alt="Header Accent">
+                <h2 class="hero__content-header">
+                    WordPress Geniuses
+                    <span>
+                        <img src="/assets/images/image_4.svg" />
+                        At Your Service
+                    </span>
+                </h2>
+            </div>
+
+            <p class="hero__content-p">While WordPress makes it easy for anyone
+                to build a website without knowing how to code, there's always a
+                chance of running into an issue that you don't know how to fix.
+                That's where we come in! DreamHost's friendly, pro-level
+                customer support representatives are the best
+                in the biz, skillfully striving to always make sure your
+                hosting needs are met.
+            </p>
+            <p class="hero__content-p">Having an issue? Just let us know - when it comes to WordPress
+                hosting, no question is ever too simple or too complex.
+            </p>
+            <div class="hero__content-link--wrapper">
+                <a class="hero__content-link" href="/">Learn More &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero__section hero__section--right">
+        <div class="hero__content hero__content--right">
+            <img class="hero__content-image" src="./assets/images/image_2.png" alt="WordPress Hosting Geniuses">
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: clamp(2rem, 3vw, 4rem);
+
+        &__section {
+            width: 100%;
+
+            &--left {
+                flex: 1;
+                display: flex;
+                padding-left: 7.8vw;
+            }
+
+            &--right {
+                width: 100%;
+                flex-basis: 45%;
+                padding-right: 3vw;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+
+            &--right {
+                align-items: center;
+            }
+
+            &-top {
+                position: relative;
+            }
+
+            &-decoration {
+                position: absolute;
+                left: -217px;
+                bottom: 26px;
+
+                @media screen and (max-width: 1368px) {
+                    bottom: 26px;
+                }
+            }
+
+            &-header {
+                font-size: clamp(42px, 2.6vw, 64px);
+                font-weight: bold;
+                line-height: clamp(60px, 3vw, 80px);
+                margin-bottom: 1rem;
+
+                span {
+                    display: block;
+
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                    }
+                }
+
+            }
+
+            &-image {
+                width: clamp(500px, 100%, 800px);
+                max-width: 100%;
+                height: auto;
+            }
+
+            &-p {
+                font-size: clamp(16px, 1.6vw, 24px);
+                line-height: 40px;
+                margin-bottom: 1rem;
+                font-weight: 500;
+            }
+
+            &-link {
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+
+                &--wrapper {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 1rem;
+                }
+            }
+
+        }
+    }
+</style>

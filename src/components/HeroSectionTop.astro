@@ -3,9 +3,10 @@
 ---
 
 <div class="hero">
+    <h2 class="hero__header--tablet">WordPress Geniuses<br>At Your Service</h2>
     <div class="hero__section hero__section--left">
         <div class="hero__content hero__content--left">
-            <div class="hero__content-top">
+            <div class="hero__content-top desktop-only">
                 <img class="hero__content-decoration" src="/assets/images/image_1.svg" alt="Header Accent">
                 <h2 class="hero__content-header">
                     WordPress Geniuses
@@ -24,10 +25,10 @@
                 in the biz, skillfully striving to always make sure your
                 hosting needs are met.
             </p>
-            <p class="hero__content-p">Having an issue? Just let us know - when it comes to WordPress
+            <p class="hero__content-p desktop-only">Having an issue? Just let us know - when it comes to WordPress
                 hosting, no question is ever too simple or too complex.
             </p>
-            <div class="hero__content-link--wrapper">
+            <div class="hero__content-link--wrapper--desktop">
                 <a class="hero__content-link" href="/">Learn More &rarr;</a>
             </div>
         </div>
@@ -35,6 +36,14 @@
     <div class="hero__section hero__section--right">
         <div class="hero__content hero__content--right">
             <img class="hero__content-image" src="./assets/images/image_2.png" alt="WordPress Hosting Geniuses">
+        </div>
+    </div>
+    <div class="hero__footer--tablet">
+        <p class="hero__content-p">Having an issue? Just let us know - when it comes to WordPress
+            hosting, no question is ever too simple or too complex.
+        </p>
+        <div class="hero__content-link--wrapper--tablet">
+            <a class="hero__content-link" href="/">Learn More &rarr;</a>
         </div>
     </div>
 </div>
@@ -45,7 +54,78 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-top: clamp(2rem, 3vw, 4rem);
+        margin-top: clamp(4rem, 4vw, 6rem);
+
+        @media screen and (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        &__header--tablet {
+            display: none;
+
+            @media screen and (max-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-basis: 100%;
+                text-align: center;
+                font-size: clamp(42px, 2.6vw, 64px);
+                font-weight: bold;
+                line-height: clamp(60px, 3vw, 80px);
+                margin-bottom: 2rem;
+            }
+
+            @media screen and (max-width: 768px) {
+                text-align: left;
+                align-items: flex-start;
+                padding-left: 2rem;
+                ;
+            }
+        }
+
+        &__footer--tablet {
+            display: none;
+
+            @media screen and (max-width: 1024px) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-basis: 100%;
+                padding: 2rem 8px;
+                margin-top: 2rem;
+                background-color: var(--semi-white);
+
+                .hero__content-link--wrapper {
+                    max-width: 30%;
+                }
+
+                .hero__content-p {
+                    width: 50ch;
+                    max-width: 70%;
+                    font-size: clamp(20px, 1.6vw, 24px);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+                padding-bottom: 4rem;
+                justify-content: flex-start;
+
+                .hero__content-p {
+                    width: 100%;
+                    max-width: 100%;
+                    font-size: clamp(20px, 1.6vw, 24px);
+                }
+
+                .hero__content-link--wrapper--tablet {
+                    width: 100%;
+                    max-width: 100%;
+                    padding-left: 2rem;
+                }
+            }
+        }
 
         &__section {
             width: 100%;
@@ -54,12 +134,30 @@
                 flex: 1;
                 display: flex;
                 padding-left: 7.8vw;
+
+                @media screen and (max-width: 1024px) {
+                    padding-left: 3vw;
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding-left: 0;
+                    flex-basis: 100%;
+                }
             }
 
             &--right {
                 width: 100%;
                 flex-basis: 45%;
                 padding-right: 3vw;
+
+                @media screen and (max-width: 1024px) {
+                    padding-right: 3vw;
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding-right: 0;
+                    flex-basis: 100%;
+                }
             }
         }
 
@@ -108,6 +206,13 @@
                 width: clamp(500px, 100%, 800px);
                 max-width: 100%;
                 height: auto;
+
+                @media screen and (max-width: 768px) {
+                    width: 600px;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    padding: 2rem;
+                }
             }
 
             &-p {
@@ -115,6 +220,10 @@
                 line-height: 40px;
                 margin-bottom: 1rem;
                 font-weight: 500;
+
+                @media screen and (max-width: 768px) {
+                    padding: 2rem;
+                }
             }
 
             &-link {
@@ -127,6 +236,18 @@
                     display: flex;
                     justify-content: flex-start;
                     margin-bottom: 1rem;
+
+                    &--desktop {
+                        @media screen and (max-width: 1024px) {
+                            display: none;
+                        }
+                    }
+
+                    &--tablet {
+                        @media screen and (min-width: 1024px) {
+                            display: none;
+                        }
+                    }
                 }
             }
 

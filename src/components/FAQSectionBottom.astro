@@ -9,11 +9,11 @@
     <div class="faq__section-right">
         <!-- an accordion style faq section -->
         <div class="faq__accordion-outer">
-            <ol class="accordion__list">
+            <ul class="accordion__list">
                 <li class="accordion__item">
                     <div class="accordion__item-question">
                         <span>
-                            What is the difference between a “free” and a “paid” account?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias possimus fugit magnam!
                         </span>
                         <span class="accordion__item-title-icon">
                             <img src="/assets/images/image_5.svg" alt="plus icon">
@@ -21,18 +21,201 @@
                     </div>
                     <div class="accordion__item-answer">
                         <p>
-                            A free account is a personal account that is not tied to a specific company. A paid account
-                            is a personal account that is tied to a specific company.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum ea harum maxime expedita
+                            aliquam pariatur soluta inventore rem ad nisi.
                         </p>
                     </div>
                 </li>
-            </ol>
+                <li class="accordion__item">
+                    <div class="accordion__item-question">
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias possimus fugit magnam!
+                        </span>
+                        <span class="accordion__item-title-icon">
+                            <img src="/assets/images/image_5.svg" alt="plus icon">
+                        </span>
+                    </div>
+                    <div class="accordion__item-answer">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum ea harum maxime expedita
+                            aliquam pariatur soluta inventore rem ad nisi.
+                        </p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <div class="accordion__item-question">
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias possimus fugit magnam!
+                        </span>
+                        <span class="accordion__item-title-icon">
+                            <img src="/assets/images/image_5.svg" alt="plus icon">
+                        </span>
+                    </div>
+                    <div class="accordion__item-answer">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum ea harum maxime expedita
+                            aliquam pariatur soluta inventore rem ad nisi.
+                        </p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <div class="accordion__item-question">
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias possimus fugit magnam!
+                        </span>
+                        <span class="accordion__item-title-icon">
+                            <img src="/assets/images/image_5.svg" alt="plus icon">
+                        </span>
+                    </div>
+                    <div class="accordion__item-answer">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum ea harum maxime expedita
+                            aliquam pariatur soluta inventore rem ad nisi.
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
 <style lang="scss">
     .faq {
-        padding: 2em 0;
+        padding: 5.5vw 0 7vw;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: clamp(4rem, 4vw, 6rem) 0 7vw;
+        }
+
+
+        &__section-left {
+            flex-basis: 30%;
+            padding-left: 7.8vw;
+
+            @media screen and (max-width: 1024px) {
+                flex-basis: 100%;
+                padding-left: 0;
+            }
+
+            h2 {
+                font-weight: bold;
+                font-size: clamp(36px, 4vw, 48px);
+                max-width: 16ch;
+
+                @media screen and (max-width: 1024px) {
+                    max-width: 100%;
+                    padding: 0 7.8vw;
+                }
+
+                @media screen and (max-width: 768px) {
+                    font-size: clamp(42px, 2.6vw, 64px);
+                }
+            }
+        }
+
+        &__section-right {
+            flex-basis: 70%;
+            padding-right: 7.8vw;
+
+            @media screen and (max-width: 1024px) {
+                flex-basis: 100%;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .accordion {
+        &__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            @media screen and (max-width: 1024px) {
+                padding: 2rem 7.8vw;
+            }
+        }
+
+        &__item {
+            padding: 2rem 0;
+            border-top: 1px solid var(--semi-white);
+            border-bottom: 1px solid var(--semi-white);
+
+            &-question {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 2rem;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: clamp(18px, 4vw, 20px);
+
+                @media screen and (max-width: 1024px) {
+                    padding: 0;
+                }
+
+                @media screen and (max-width: 768px) {
+                    span {
+                        padding-right: 1rem;
+                        ;
+                    }
+                }
+
+
+                &-title-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
+                    background-color: var(--semi-white);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &-title {
+                    font-weight: bold;
+                    font-size: clamp(24px, 4vw, 32px);
+                    max-width: 16ch;
+                }
+
+            }
+
+            &-answer {
+                display: none;
+
+                p {
+                    padding: 2rem;
+
+                    @media screen and (max-width: 1024px) {
+                        padding: 2rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .rotate {
+        transform: rotate(45deg) scale(0.8);
+        transition: all 0.3s ease-in-out;
     }
 </style>
+
+
+<script>
+    $(function () {
+        $('.accordion__item-question').on('click', function () {
+            $(this).next().slideToggle();
+            $(this).find('.accordion__item-title-icon').toggleClass('rotate');
+        });
+    });
+</script>

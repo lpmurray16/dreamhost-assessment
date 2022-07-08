@@ -1,42 +1,13 @@
-# Welcome to [Astro](https://astro.build)
+# DreamHost Assessment - Logan Murray
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+## My thought process:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Because this is just a static page I thought it appropriate to use a SSG like Astro as a tool to help me organize my layout into components. Looking at the layout itself it was clear that there were 3 sections/components. So that is exactly what I did. I created three components and incorporated them into the index file (Astro is a great templating language tool check it out at astro.build). I then thought it would be a good idea to create some variables with the given breakpoints and the given colors from the PDf mockup that was provided. I leveraged Sass to also create the same variables just for the sake of consistency, in fact I used Sass to write all of my CSS because I was trying my best to incorporate the BEM style of writing class names and using Sass makes it easier to nest.
 
-## 🚀 Project Structure
+## What I would do differently next time:
 
-Inside of your Astro project, you'll see the following folders and files:
+#### 1. I would create more utility classes in my CSS that can be reused (or incorporate Tailwind or Bulma or Semantic UI) instead of trying to use specific classes for each element.
 
-```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+#### 2. I would refactor my code so that I didn't have to rely on 2 headers based on 2 breakpoints to show and hide due to their locations. In this instance I might be able to leverage the grid system along with media queries.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+#### 3. If this were a serious production level project I would have to consider SEO best practices within the markup and accessibility.
